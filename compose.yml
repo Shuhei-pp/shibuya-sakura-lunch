@@ -1,0 +1,11 @@
+services:
+  rust:
+    image: rust:1.81.0
+    container_name: rust
+    working_dir: /app
+    volumes:
+      - .:/app
+    tty: true
+    environment:
+      - USER=user
+      - CARGO_BUILD_TARGET_DIR=/app/target
